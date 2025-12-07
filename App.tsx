@@ -5,7 +5,6 @@ import About from './components/About';
 import Stats from './components/Stats';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import AIChat from './components/AIChat';
 
 function App() {
   useEffect(() => {
@@ -33,7 +32,6 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      <AIChat />
     </div>
   );
 }

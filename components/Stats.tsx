@@ -1,12 +1,11 @@
 import React from 'react';
-import { Users, Award, Shield, Cpu } from 'lucide-react';
+import { Users, Shield, Cpu } from 'lucide-react';
 
 const Stats: React.FC = () => {
   const stats = [
-    { label: 'משתתפים', value: '500+', icon: Users, desc: 'קצינים, מהנדסים ומקבלי החלטות' },
-    { label: 'דרגות', value: 'רס״ן-סא״ל', icon: Award, desc: 'דרג פיקודי וטכנולוגי בכיר' },
-    { label: 'ביטחון', value: 'סייבר', icon: Shield, desc: 'מומחי אבטחת מידע והגנה' },
-    { label: 'טכנולוגיה', value: 'AI & Open Source', icon: Cpu, desc: 'חדשנות פורצת דרך' },
+    { label: 'משתתפים', value: '450+', icon: Users, desc: 'קצינים, מהנדסים ומקבלי החלטות' },
+    { label: 'בתי תוכנה צה״ליים', value: '15+', icon: Cpu, desc: 'יחידות פיתוח וטכנולוגיה מובילות' },
+    { label: 'תעשיות ביטחוניות וסטארטאפים', value: '10+', icon: Shield, desc: 'חברות ענק ומיזמים חדשניים' },
   ];
 
   return (
@@ -19,7 +18,7 @@ const Stats: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 reveal">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 reveal">
           {stats.map((stat, index) => (
             <div 
               key={index} 
@@ -48,10 +47,28 @@ const Stats: React.FC = () => {
               <p className="text-slate-300 leading-relaxed mb-6">
                 המשתתפים נהנו מהרצאות מעשירות, פאנלים מקצועיים והזדמנות ללמוד מהידע המצטבר בין היחידות ולשתף בפרוייקטים חדשניים. האירוע סיפק הצצה נדירה אל מאחורי הקלעים של העשייה הטכנולוגית-ביטחונית.
               </p>
+              <ul className="space-y-2 text-slate-400">
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-primary rounded-full"></span>
+                  הרצאות מומחים מהתעשייה והצבא
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-primary rounded-full"></span>
+                  נטוורקינג עם בכירים ומקבלי החלטות
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-primary rounded-full"></span>
+                  חשיפה לטכנולוגיות Dual-Use מתקדמות
+                </li>
+              </ul>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-                <img src="https://picsum.photos/seed/tech1/400/300" alt="Audience" className="rounded-lg opacity-80 hover:opacity-100 transition shadow-lg" />
-                <img src="https://picsum.photos/seed/tech2/400/300" alt="Panel" className="rounded-lg opacity-80 hover:opacity-100 transition shadow-lg mt-8" />
+            <div className="relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-xl blur opacity-30"></div>
+                <img 
+                  src="https://drive.google.com/thumbnail?id=1r_rdkWIeeHzR14OVawQhRvXkTX8hlJV_&sz=w1200" 
+                  alt="OpenDefense Conference Audience" 
+                  className="relative rounded-xl shadow-2xl border border-slate-700 w-full h-auto object-cover transform hover:scale-[1.02] transition duration-500" 
+                />
             </div>
           </div>
         </div>
