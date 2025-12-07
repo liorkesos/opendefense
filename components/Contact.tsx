@@ -29,21 +29,8 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-slate-700 rounded-lg text-primary">
-                  <Globe size={24} />
-                </div>
-                <div>
-                  <h4 className="text-white font-bold">אתר רשמי</h4>
-                  <a 
-                    href="https://linnovate.net/opendefense-2026/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-primary transition flex items-center gap-2"
-                  >
-                    linnovate.net/opendefense-2026
-                    <ArrowLeft size={14} />
-                  </a>
-                </div>
+                
+                
               </div>
             </div>
 

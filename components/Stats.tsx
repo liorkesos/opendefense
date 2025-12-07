@@ -8,6 +8,15 @@ const Stats: React.FC = () => {
     { label: 'תעשיות ביטחוניות וסטארטאפים', value: '10+', icon: Shield, desc: 'חברות ענק ומיזמים חדשניים' },
   ];
 
+  const partners = [
+    { name: 'Rafael', src: 'https://linnovate.net/wp-content/uploads/2025/01/Refael-Logo-scaled.jpg' },
+    { name: 'Elbit Systems', src: 'https://linnovate.net/wp-content/uploads/2025/01/Elbit-Logo.png' },
+    { name: 'IAI', src: 'https://linnovate.net/wp-content/uploads/2025/01/IAI-Logo.png' },
+    { name: 'Hossted', src: 'https://linnovate.net/wp-content/uploads/2025/01/logo-dark.png' },
+    { name: 'Mafat', src: 'https://linnovate.net/wp-content/uploads/2025/01/Mafat-Logo.png' },
+    { name: 'Linnovate', src: 'https://linnovate.net/wp-content/uploads/2024/11/Linnovate_black.png' },
+  ];
+
   return (
     <section id="recap" className="py-24 bg-slate-900 border-b border-slate-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,6 +81,27 @@ const Stats: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Partners / Organizers Section */}
+        <div className="mt-24 reveal">
+          <div className="text-center mb-12">
+             <h3 className="text-xl md:text-2xl font-medium text-slate-400 mb-2">החברות המארגנות</h3>
+             <h2 className="text-3xl md:text-4xl font-bold text-white">פורום קוד פתוח בתעשייה הביטחונית</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {partners.map((partner, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl flex items-center justify-center h-32 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-slate-200">
+                <img 
+                  src={partner.src} 
+                  alt={partner.name} 
+                  className="max-h-20 max-w-full object-contain" 
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );
