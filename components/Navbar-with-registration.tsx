@@ -36,6 +36,12 @@ const Navbar: React.FC = () => {
                   {link.name}
                 </a>
               ))}
+              <a 
+                href="#contact"
+                className="bg-primary hover:bg-lime-400 text-slate-900 px-5 py-2 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-primary/30"
+              >
+                בקשת הצטרפות
+              </a>
             </div>
           </div>
 
@@ -65,6 +71,13 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
+             <a
+                href="#contact"
+                onClick={() => setIsOpen(false)}
+                className="text-slate-900 bg-primary block px-3 py-2 rounded-md text-base font-medium mt-4 text-center font-bold"
+              >
+                בקשת הצטרפות
+              </a>
           </div>
         </div>
       )}

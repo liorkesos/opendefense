@@ -64,6 +64,45 @@ const Contact: React.FC = () => {
 
           </div>
 
+          {/* Form Side (Mockup) */}
+          <div className="bg-slate-800 p-8 rounded-2xl shadow-xl border border-slate-700 reveal transition-delay-200">
+            <h3 className="text-xl font-bold text-white mb-6">בקשת רישום ראשוני</h3>
+            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-slate-400 mb-1">שם פרטי</label>
+                  <input type="text" id="firstName" className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary transition" />
+                </div>
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-medium text-slate-400 mb-1">שם משפחה</label>
+                  <input type="text" id="lastName" className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary transition" />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="org" className="block text-sm font-medium text-slate-400 mb-1">ארגון / יחידה</label>
+                <input type="text" id="org" className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary transition" />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-slate-400 mb-1">אימייל ארגוני</label>
+                <input type="email" id="email" className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary transition" />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-slate-400 mb-1">הערות נוספות</label>
+                <textarea id="message" rows={4} className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary transition"></textarea>
+              </div>
+
+              <button type="submit" className="w-full bg-primary hover:bg-lime-400 text-slate-900 font-bold py-3 rounded-lg transition shadow-lg hover:shadow-primary/40 mt-2">
+                שלח בקשה
+              </button>
+              <p className="text-xs text-center text-slate-500 mt-4">
+                פרטיך ישמרו במערכת לטובת יצירת קשר בלבד.
+              </p>
+            </form>
+          </div>
+
         </div>
       </div>
     </section>
