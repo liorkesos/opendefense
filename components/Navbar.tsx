@@ -7,7 +7,6 @@ const Navbar: React.FC = () => {
   const links = [
     { name: 'אודות', href: '#about' },
     { name: 'סיכום 2025', href: '#recap' },
-    { name: 'למה להגיע', href: '#features' },
     { name: 'צור קשר', href: '#contact' },
   ];
 

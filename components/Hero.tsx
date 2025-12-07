@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
         <img 
           src="https://linnovate.net/wp-content/uploads/2025/01/image-1285.png" 
           alt="Cyber Security Background" 
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent"></div>
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
