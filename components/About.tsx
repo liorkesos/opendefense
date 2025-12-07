@@ -10,7 +10,7 @@ const About: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="lg:text-center max-w-3xl mx-auto mb-16 reveal">
-          <h2 className="text-base text-primary font-semibold tracking-wide uppercase">על הכנס</h2>
+          <h2 className="text-base text-primary font-semibold tracking-wide uppercase"> על הכנס</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
             לחבר את המוחות המבריקים ביותר בביטחון ובטכנולוגיה
           </p>
