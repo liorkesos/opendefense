@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
                 <textarea id="message" rows={4} className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary transition"></textarea>
               </div>
 
-              <button type="submit" className="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 rounded-lg transition shadow-lg hover:shadow-primary/40 mt-2">
+              <button type="submit" className="w-full bg-primary hover:bg-lime-400 text-slate-900 font-bold py-3 rounded-lg transition shadow-lg hover:shadow-primary/40 mt-2">
                 שלח בקשה
               </button>
               <p className="text-xs text-center text-slate-500 mt-4">

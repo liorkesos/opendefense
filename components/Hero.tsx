@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
        
         <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight mb-6 drop-shadow-2xl animate-fade-in">
           <span className="block">OpenDefense 2026</span>
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-secondary mt-2">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-primary to-secondary mt-2">
 חדשנות פתוחה במגזר הביטחוני          </span>
         </h1>
 
@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
         <div className="mt-12 animate-fade-in delay-300">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary transition-all shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:shadow-[0_0_30px_rgba(14,165,233,0.5)] transform hover:-translate-y-1"
+            className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-slate-900 bg-gradient-to-r from-primary to-lime-500 hover:from-lime-400 hover:to-primary transition-all shadow-[0_0_20px_rgba(163,230,53,0.3)] hover:shadow-[0_0_30px_rgba(163,230,53,0.5)] transform hover:-translate-y-1"
           >
             להרשמה ופרטים נוספים
           </a>

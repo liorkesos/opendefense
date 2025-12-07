@@ -55,12 +55,14 @@ const AIChat: React.FC = () => {
       {isOpen && (
         <div className="mb-4 w-80 sm:w-96 bg-slate-800 border border-slate-700 rounded-xl shadow-2xl flex flex-col overflow-hidden animate-fade-in">
           {/* Header */}
-          <div className="bg-gradient-to-r from-primary to-blue-700 p-4 flex justify-between items-center">
+          <div className="bg-gradient-to-r from-slate-700 to-slate-800 p-4 flex justify-between items-center border-b border-slate-600">
             <div className="flex items-center gap-2 text-white">
-              <Bot size={20} />
+              <div className="p-1 bg-primary/20 rounded-lg">
+                 <Bot size={20} className="text-primary" />
+              </div>
               <span className="font-bold">עוזר אישי - OpenDefense</span>
             </div>
-            <button onClick={toggleChat} className="text-white hover:text-gray-200 transition">
+            <button onClick={toggleChat} className="text-slate-400 hover:text-white transition">
               <X size={20} />
             </button>
           </div>
@@ -76,7 +78,7 @@ const AIChat: React.FC = () => {
                   className={`max-w-[80%] p-3 rounded-lg text-sm ${
                     msg.sender === 'user'
                       ? 'bg-slate-700 text-white rounded-br-none'
-                      : 'bg-primary/20 text-blue-100 border border-primary/30 rounded-bl-none'
+                      : 'bg-primary/10 text-slate-200 border border-primary/20 rounded-bl-none'
                   }`}
                 >
                   {msg.text}
@@ -85,8 +87,8 @@ const AIChat: React.FC = () => {
             ))}
             {isLoading && (
               <div className="flex justify-end">
-                <div className="bg-primary/20 text-blue-100 p-3 rounded-lg rounded-bl-none flex items-center gap-2">
-                  <Loader2 className="animate-spin" size={16} />
+                <div className="bg-primary/10 text-slate-200 p-3 rounded-lg rounded-bl-none flex items-center gap-2 border border-primary/20">
+                  <Loader2 className="animate-spin text-primary" size={16} />
                   <span>מקליד...</span>
                 </div>
               </div>
@@ -107,7 +109,7 @@ const AIChat: React.FC = () => {
             <button
               onClick={handleSend}
               disabled={isLoading || !input.trim()}
-              className="bg-primary hover:bg-blue-600 text-white p-2 rounded-md transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-primary hover:bg-lime-400 text-slate-900 p-2 rounded-md transition disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <Send size={18} />
             </button>
@@ -117,7 +119,7 @@ const AIChat: React.FC = () => {
 
       <button
         onClick={toggleChat}
-        className={`${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'} transition-all duration-300 bg-primary hover:bg-blue-600 text-white p-4 rounded-full shadow-lg hover:shadow-primary/50 flex items-center gap-2`}
+        className={`${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'} transition-all duration-300 bg-primary hover:bg-lime-400 text-slate-900 p-4 rounded-full shadow-lg hover:shadow-primary/50 flex items-center gap-2`}
       >
         <MessageSquare size={24} />
         <span className="font-bold hidden sm:inline">יש לך שאלה?</span>

@@ -63,7 +63,7 @@ const Stats: React.FC = () => {
               </ul>
             </div>
             <div className="relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-xl blur opacity-30"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-30"></div>
                 <img 
                   src="https://drive.google.com/thumbnail?id=1r_rdkWIeeHzR14OVawQhRvXkTX8hlJV_&sz=w1200" 
                   alt="OpenDefense Conference Audience" 

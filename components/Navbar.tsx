@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, ShieldCheck } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,17 +14,15 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed w-full z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-32">
           
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-blue-700 rounded-lg flex items-center justify-center text-white shadow-lg shadow-primary/20">
-              <ShieldCheck size={24} />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-black text-xl tracking-wide text-white">OpenDefense-AI</span>
-              <span className="text-[10px] text-primary uppercase tracking-wider font-bold">חדשנות בביטחון</span>
-            </div>
+          <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => window.scrollTo(0,0)}>
+            <img 
+              src="https://drive.google.com/thumbnail?id=1Vr4xjeX3j1yrZxB-rsMs2yhC2x9efuB0&sz=w1000" 
+              alt="OpenDefense Logo" 
+              className="h-28 w-auto object-contain"
+            />
           </div>
 
           {/* Desktop Menu */}
@@ -41,7 +39,7 @@ const Navbar: React.FC = () => {
               ))}
               <a 
                 href="#contact"
-                className="bg-primary hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-primary/30"
+                className="bg-primary hover:bg-lime-400 text-slate-900 px-5 py-2 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-primary/30"
               >
                 בקשת הצטרפות
               </a>
@@ -77,7 +75,7 @@ const Navbar: React.FC = () => {
              <a
                 href="#contact"
                 onClick={() => setIsOpen(false)}
-                className="text-white bg-primary block px-3 py-2 rounded-md text-base font-medium mt-4 text-center"
+                className="text-slate-900 bg-primary block px-3 py-2 rounded-md text-base font-medium mt-4 text-center font-bold"
               >
                 בקשת הצטרפות
               </a>
