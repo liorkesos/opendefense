@@ -13,14 +13,14 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed w-full z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-32">
+        <div className="flex items-center justify-between h-16">
           
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => window.scrollTo(0,0)}>
             <img 
-              src="https://drive.google.com/thumbnail?id=1Vr4xjeX3j1yrZxB-rsMs2yhC2x9efuB0&sz=w1000" 
+              src="https://s3.eu-central-2.wasabisys.com/linnovate-misc/opendefense/opendefence%20logo.png" 
               alt="OpenDefense Logo" 
-              className="h-28 w-auto object-contain"
+              className="h-8 w-auto object-contain"
             />
           </div>
 
