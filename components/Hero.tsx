@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
           </div>
           <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-700 backdrop-blur-sm">
             <MapPin className="text-primary" size={20} />
-            <span>מיקום יימסר לנרשמים</span>
+            <span>מוז״א - מוזיאון ארץ ישראל</span>
           </div>
         </div>
 
