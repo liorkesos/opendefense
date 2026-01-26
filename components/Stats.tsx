@@ -27,11 +27,11 @@ const Stats: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 reveal">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {stats.map((stat, index) => (
             <div 
               key={index} 
-              className="relative group bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 overflow-hidden"
+              className={`relative group bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 overflow-hidden reveal delay-${(index + 1) * 100}`}
             >
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                 <stat.icon size={100} />
@@ -48,10 +48,10 @@ const Stats: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-slate-800 rounded-2xl p-8 lg:p-12 relative overflow-hidden reveal">
+        <div className="mt-16 bg-slate-800 rounded-2xl p-8 lg:p-12 relative overflow-hidden reveal reveal-scale delay-200">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-slate-800 via-transparent to-slate-800 z-10"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-20 items-center">
-            <div>
+            <div className="reveal-left active:translate-x-0">
               <h3 className="text-2xl font-bold text-white mb-4">חוויה מקצועית יוצאת דופן</h3>
               <p className="text-slate-300 leading-relaxed mb-6">
                 המשתתפים נהנו מהרצאות מעשירות, פאנלים מקצועיים והזדמנות ללמוד מהידע המצטבר בין היחידות ולשתף בפרוייקטים חדשניים. האירוע סיפק הצצה נדירה אל מאחורי הקלעים של העשייה הטכנולוגית-ביטחונית.
@@ -71,7 +71,7 @@ const Stats: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="relative">
+            <div className="relative reveal-right active:translate-x-0">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-30"></div>
                 <img 
                   src="https://drive.google.com/thumbnail?id=1r_rdkWIeeHzR14OVawQhRvXkTX8hlJV_&sz=w1200" 
@@ -91,7 +91,7 @@ const Stats: React.FC = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {partners.map((partner, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl flex items-center justify-center h-32 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-slate-200">
+              <div key={index} className={`bg-white p-6 rounded-xl flex items-center justify-center h-32 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-slate-200 reveal delay-${(index % 3 + 1) * 100}`}>
                 <img 
                   src={partner.src} 
                   alt={partner.name} 

@@ -22,6 +22,7 @@
         font-family: 'Heebo', sans-serif;
         background-color: #0f172a; /* Slate 900 */
         color: #e2e8f0; /* Slate 200 */
+        overflow-x: hidden;
       }
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
@@ -37,23 +38,49 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #475569;
       }
-      .animate-fade-in {
-        animation: fadeIn 1s ease-out;
+      
+      /* Refined Scroll Reveal System */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1.2s cubic-bezier(0.21, 0.45, 0.32, 0.9),
+                    transform 1.2s cubic-bezier(0.21, 0.45, 0.32, 0.9);
+        will-change: opacity, transform;
       }
+      
+      .reveal-left {
+        transform: translateX(-30px);
+      }
+      
+      .reveal-right {
+        transform: translateX(30px);
+      }
+
+      .reveal-scale {
+        transform: scale(0.95);
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translate(0) scale(1);
+      }
+
+      /* Animation Delays */
+      .delay-100 { transition-delay: 100ms; }
+      .delay-200 { transition-delay: 200ms; }
+      .delay-300 { transition-delay: 300ms; }
+      .delay-400 { transition-delay: 400ms; }
+      .delay-500 { transition-delay: 500ms; }
+      .delay-600 { transition-delay: 600ms; }
+      .delay-700 { transition-delay: 700ms; }
+
+      .animate-fade-in {
+        animation: fadeIn 1.2s cubic-bezier(0.21, 0.45, 0.32, 0.9) forwards;
+      }
+      
       @keyframes fadeIn {
         from { opacity: 0; transform: translateY(20px); }
         to { opacity: 1; transform: translateY(0); }
-      }
-      
-      /* Scroll Reveal Animation */
-      .reveal {
-        opacity: 0;
-        transform: translateY(40px);
-        transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-      }
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
       }
     </style>
     <script>

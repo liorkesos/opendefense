@@ -21,7 +21,7 @@ const About: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             
-            <div className="bg-slate-800/50 backdrop-blur border border-slate-700 p-8 rounded-2xl hover:bg-slate-800 transition duration-300 reveal">
+            <div className="bg-slate-800/50 backdrop-blur border border-slate-700 p-8 rounded-2xl hover:bg-slate-800 transition duration-300 reveal delay-100">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-400 mb-6">
                     <Share2 size={24} />
                 </div>
@@ -31,7 +31,7 @@ const About: React.FC = () => {
                 </p>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur border border-slate-700 p-8 rounded-2xl hover:bg-slate-800 transition duration-300 reveal transition-delay-100">
+            <div className="bg-slate-800/50 backdrop-blur border border-slate-700 p-8 rounded-2xl hover:bg-slate-800 transition duration-300 reveal delay-200">
                 <div className="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center text-emerald-400 mb-6">
                     <Target size={24} />
                 </div>
@@ -41,7 +41,7 @@ const About: React.FC = () => {
                 </p>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur border border-slate-700 p-8 rounded-2xl hover:bg-slate-800 transition duration-300 reveal transition-delay-200">
+            <div className="bg-slate-800/50 backdrop-blur border border-slate-700 p-8 rounded-2xl hover:bg-slate-800 transition duration-300 reveal delay-300">
                 <div className="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center text-amber-400 mb-6">
                     <Lock size={24} />
                 </div>
