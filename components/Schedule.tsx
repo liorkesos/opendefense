@@ -2,7 +2,7 @@ import React from 'react';
 import { Clock, Coffee, Mic, Users, Play, Shield, Code, Cpu, Plane, Ship, Radio, Target, Navigation } from 'lucide-react';
 
 const scheduleData = [
-  { time: '08:00', title: 'רישום וקפה', description: '', icon: Users, type: 'general' },
+  { time: '08:00', title: 'רישום וקפה', description: '', icon: Users, type: 'break' },
   { time: '09:00', title: 'דברי פתיחה', description: 'עמי שלזינגר, ליאור קיסוס', icon: Play, type: 'keynote' },
   { time: '09:15', title: 'פיתוח AI מתקדם בסביבה נתיקה', description: 'נציג רפאל, רפאל - LLM, Bigdata, MCP', icon: Shield, type: 'tech' },
   { time: '09:45', title: 'הנגשת AI ו-MLOPS - ממר״ם', description: 'אריאל פולק (מנהל מוצר AI הענן המבצעי), דין פלסן (מנכ"ל Dagshub)', icon: Cpu, type: 'tech' },
@@ -23,12 +23,12 @@ const scheduleData = [
 
 const Schedule: React.FC = () => {
   return (
-    <section id="schedule" className="py-24 bg-white relative overflow-hidden">
+    <section id="schedule" className="py-20 bg-white relative overflow-hidden">
       {/* Dynamic Defense Background Illustrations */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
         
         {/* Tactical Radar Grid - Center */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] reveal reveal-scale">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.02] reveal reveal-scale">
            <svg className="w-full h-full text-slate-900" viewBox="0 0 100 100" fill="none">
              <circle cx="50" cy="50" r="20" stroke="currentColor" strokeWidth="0.05" />
              <circle cx="50" cy="50" r="35" stroke="currentColor" strokeWidth="0.05" />
@@ -38,88 +38,76 @@ const Schedule: React.FC = () => {
            </svg>
         </div>
 
-        {/* Fighter Jet - Top Right, slides in from top-right */}
-        <div className="absolute top-10 right-10 opacity-[0.04] text-slate-900 reveal reveal-right delay-300">
-           <Plane size={300} strokeWidth={0.5} className="rotate-[-15deg]" />
+        {/* Illustrations with reduced opacity */}
+        <div className="absolute top-10 right-10 opacity-[0.015] text-slate-900 reveal reveal-right delay-300">
+           <Plane size={250} strokeWidth={0.5} className="rotate-[-15deg]" />
         </div>
-
-        {/* Naval Ship (Stil) - Bottom Left, slides in from bottom-left */}
-        <div className="absolute bottom-20 left-[-5%] opacity-[0.04] text-slate-900 reveal reveal-left delay-500">
-           <Ship size={400} strokeWidth={0.3} />
+        <div className="absolute bottom-10 left-[-5%] opacity-[0.015] text-slate-900 reveal reveal-left delay-500">
+           <Ship size={300} strokeWidth={0.3} />
         </div>
-
-        {/* Tank Illustration (Custom Path) - Mid Right */}
-        <div className="absolute top-1/3 right-[-5%] opacity-[0.03] text-slate-900 reveal reveal-right delay-700">
-           <svg width="400" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.2">
-             <path d="M4 11h16v4H4zM6 15v2h12v-2M10 8h4v3h-4zM12 4v4M14 6h4" />
-           </svg>
-        </div>
-
-        {/* Command & Control (C2) / Radio Elements - Scattered */}
-        <div className="absolute top-1/4 left-10 opacity-[0.05] text-slate-900 reveal reveal-scale delay-100">
-           <Radio size={120} strokeWidth={0.5} />
-        </div>
-        <div className="absolute bottom-1/3 left-1/4 opacity-[0.03] text-slate-900 reveal reveal-scale delay-400">
-           <Target size={180} strokeWidth={0.2} />
-        </div>
-        <div className="absolute top-2/3 right-1/4 opacity-[0.04] text-slate-900 reveal reveal-scale delay-600">
-           <Navigation size={150} strokeWidth={0.3} className="rotate-45" />
-        </div>
-
       </div>
       
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16 reveal">
-          <h2 className="text-base text-primary font-black tracking-widest uppercase mb-2">SCHEDULE</h2>
-          <p className="text-4xl font-black text-slate-900 sm:text-5xl tracking-tight">תוכנית הכנס</p>
-          <div className="mt-6 w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-10 reveal">
+          <h2 className="text-xs text-primary font-black tracking-widest uppercase mb-1">SCHEDULE</h2>
+          <p className="text-3xl font-black text-slate-900 sm:text-4xl tracking-tight">תוכנית הכנס</p>
+          <div className="mt-4 w-16 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-2">
           {scheduleData.map((item, index) => (
             <div 
               key={index} 
-              className={`flex items-center gap-4 p-5 rounded-3xl border transition-all duration-700 hover:scale-[1.01] backdrop-blur-[4px] reveal delay-${Math.min((index % 6 + 1) * 100, 700)} ${
+              className={`flex items-center gap-3 p-3 rounded-2xl border transition-all duration-500 hover:translate-x-1 backdrop-blur-[2px] reveal delay-${Math.min((index % 6 + 1) * 100, 700)} ${
                 item.type === 'break' 
-                  ? 'bg-slate-50/70 border-slate-100 opacity-80 italic' 
-                  : 'bg-white/80 border-slate-200 shadow-sm hover:shadow-lg hover:border-slate-300'
+                  ? 'bg-slate-100 border-slate-300 shadow-sm py-3' 
+                  : 'bg-white/80 border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300'
               }`}
             >
               {/* Time Column */}
-              <div className="flex-shrink-0 w-24 text-center">
-                <span className="text-2xl font-black text-slate-900 block leading-none">{item.time}</span>
+              <div className="flex-shrink-0 w-16 text-center">
+                <span className={`text-lg font-black block leading-none ${
+                  item.type === 'break' ? 'text-slate-900 underline decoration-primary/50' : 'text-slate-900'
+                }`}>{item.time}</span>
               </div>
               
-              <div className="w-px h-12 bg-slate-200 hidden sm:block"></div>
+              <div className={`w-px h-8 ${item.type === 'break' ? 'bg-slate-300' : 'bg-slate-200'}`}></div>
 
               {/* Icon Container */}
-              <div className={`flex-shrink-0 p-4 rounded-2xl transition-all duration-500 ${
+              <div className={`flex-shrink-0 p-2 rounded-xl transition-all duration-500 ${
                 item.type === 'break'
-                  ? 'bg-slate-200 text-slate-500 scale-90'
-                  : 'bg-slate-100 text-slate-600 group-hover:bg-primary/20 transition-colors'
+                  ? 'bg-white text-secondary shadow-inner'
+                  : 'bg-slate-50 text-slate-500 group-hover:bg-primary/10'
               }`}>
-                <item.icon size={28} strokeWidth={2.5} />
+                <item.icon size={18} strokeWidth={2.5} />
               </div>
 
               {/* Content Column */}
-              <div className="flex-grow text-right pr-2">
-                <h4 className="text-xl font-black leading-tight text-slate-800">
+              <div className="flex-grow text-right pr-1">
+                <h4 className={`text-sm md:text-base font-black leading-snug ${
+                  item.type === 'break' ? 'text-slate-900' : 'text-slate-800'
+                }`}>
                   {item.title}
                 </h4>
                 {item.description && (
-                  <p className="text-sm text-slate-500 font-bold mt-1 leading-relaxed">
+                  <p className="text-[11px] md:text-xs text-slate-500 font-bold mt-0.5 leading-tight">
                     {item.description}
                   </p>
                 )}
               </div>
+
+              {/* Break Indicator Line */}
+              {item.type === 'break' && (
+                <div className="hidden sm:block w-8 h-px bg-slate-300 opacity-50"></div>
+              )}
             </div>
           ))}
         </div>
 
-        <div className="mt-16 text-center reveal">
-          <div className="inline-flex items-center gap-3 bg-white/90 border border-slate-200 px-8 py-4 rounded-3xl shadow-xl backdrop-blur-md">
-             <Clock size={20} className="text-primary animate-pulse" />
-             <p className="text-slate-700 text-sm font-bold">
+        <div className="mt-10 text-center reveal">
+          <div className="inline-flex items-center gap-2 bg-white/90 border border-slate-100 px-5 py-2 rounded-full shadow-sm backdrop-blur-md">
+             <Clock size={14} className="text-primary" />
+             <p className="text-slate-600 text-[10px] md:text-xs font-bold">
                * התוכנית כפופה לשינויים בהתאם להנחיות גורמי הביטחון והפקה.
              </p>
           </div>
