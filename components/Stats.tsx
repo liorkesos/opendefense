@@ -13,7 +13,10 @@ const Stats: React.FC = () => {
     { name: 'Elbit Systems', src: 'https://linnovate.net/wp-content/uploads/2025/01/Elbit-Logo.png' },
     { name: 'IAI', src: 'https://linnovate.net/wp-content/uploads/2025/01/IAI-Logo.png' },
     { name: 'Hossted', src: 'https://linnovate.net/wp-content/uploads/2025/01/logo-dark.png' },
-    { name: 'Mafat', src: 'https://linnovate.net/wp-content/uploads/2025/01/Mafat-Logo.png' },
+    { name: 'Modelyo', src: 'https://drive.google.com/thumbnail?id=1fDcwkofhPVD9Iw3O-jq77QOhdNUtJJaQ&sz=w1000' },
+    { name: 'Kela', src: 'https://drive.google.com/thumbnail?id=1H_nz-BZ1-atNHkPX58M3YtBHZaeYARNL&sz=w1000' },
+    { name: 'Energy Team', src: 'https://drive.google.com/thumbnail?id=1pReKmfPfIDuUc7-EBaOFzPZARNSyycAd&sz=w1000' },
+    { name: 'Malam Defense', src: 'https://drive.google.com/thumbnail?id=1bw48a4FdbEORzvo4fjJwFkm8cx5xiI1q&sz=w1000' },
     { name: 'Linnovate', src: 'https://linnovate.net/wp-content/uploads/2024/11/Linnovate_black.png' },
   ];
 
@@ -85,18 +88,36 @@ const Stats: React.FC = () => {
         {/* Partners / Organizers Section */}
         <div className="mt-24 reveal">
           <div className="text-center mb-12">
-             <h3 className="text-xl md:text-2xl font-medium text-slate-400 mb-2">החברות המארגנות</h3>
-             <h2 className="text-3xl md:text-4xl font-bold text-white">פורום קוד פתוח בתעשייה הביטחונית</h2>
+             <h2 className="text-3xl md:text-5xl font-black text-white">הכנס מופק באדיבות:</h2>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {partners.map((partner, index) => (
-              <div key={index} className={`bg-white p-6 rounded-xl flex items-center justify-center h-32 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-slate-200 reveal delay-${(index % 3 + 1) * 100}`}>
-                <img 
-                  src={partner.src} 
-                  alt={partner.name} 
-                  className="max-h-20 max-w-full object-contain" 
-                />
+              <div key={index} className={`bg-white p-4 md:p-6 rounded-2xl flex items-center justify-center h-28 md:h-36 hover:shadow-[0_0_30px_rgba(163,230,53,0.15)] transition-all duration-300 transform hover:-translate-y-1.5 border border-slate-200 reveal delay-${(index % 4 + 1) * 100}`}>
+                {partner.src ? (
+                  <img 
+                    src={partner.src} 
+                    alt={partner.name} 
+                    className={`max-h-full max-w-full object-contain transition-transform duration-300 ${partner.name === 'Malam Defense' ? 'scale-125 p-0' : 'p-2'}`} 
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      const parent = target.parentElement;
+                      if (parent) {
+                        target.style.display = 'none';
+                        if (!parent.querySelector('.partner-text-fallback')) {
+                          const text = document.createElement('span');
+                          text.innerText = partner.name;
+                          text.className = 'partner-text-fallback font-black text-slate-900 text-center text-sm md:text-base px-2';
+                          parent.appendChild(text);
+                        }
+                      }
+                    }}
+                  />
+                ) : (
+                  <span className="font-black text-slate-900 text-center text-sm md:text-base px-2">
+                    {partner.name}
+                  </span>
+                )}
               </div>
             ))}
           </div>
