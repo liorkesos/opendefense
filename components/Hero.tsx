@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
         <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-6 text-sm font-medium text-slate-300 animate-fade-in delay-200">
           <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-700 backdrop-blur-sm">
             <Calendar className="text-primary" size={20} />
-            <span>12 למרץ, 2026</span>
+            <span>28 למאי, 2026</span>
           </div>
           <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-700 backdrop-blur-sm">
             <MapPin className="text-primary" size={20} />
