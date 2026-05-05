@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
 
         <div className="mt-12 animate-fade-in delay-300">
           <a
-            href="#contact"
+            href="/#contact"
             className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-slate-900 bg-gradient-to-r from-primary to-lime-500 hover:from-lime-400 hover:to-primary transition-all shadow-[0_0_20px_rgba(163,230,53,0.3)] hover:shadow-[0_0_30px_rgba(163,230,53,0.5)] transform hover:-translate-y-1"
           >
             להרשמה ופרטים נוספים

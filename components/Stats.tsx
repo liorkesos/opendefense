@@ -18,6 +18,7 @@ const Stats: React.FC = () => {
     { name: 'Energy Team', src: 'https://drive.google.com/thumbnail?id=1pReKmfPfIDuUc7-EBaOFzPZARNSyycAd&sz=w1000' },
     { name: 'Malam Defense', src: 'https://drive.google.com/thumbnail?id=1bw48a4FdbEORzvo4fjJwFkm8cx5xiI1q&sz=w1000' },
     { name: 'Linnovate', src: 'https://linnovate.net/wp-content/uploads/2024/11/Linnovate_black.png' },
+    { name: 'AI21 Labs', src: 'https://www.ai21.com/hubfs/AI21_Logo_Black.png' },
   ];
 
   return (
@@ -98,7 +99,7 @@ const Stats: React.FC = () => {
                   <img 
                     src={partner.src} 
                     alt={partner.name} 
-                    className={`max-h-full max-w-full object-contain transition-transform duration-300 ${partner.name === 'Malam Defense' ? 'scale-125 p-0' : 'p-2'}`} 
+                    className={`max-h-full max-w-full object-contain transition-transform duration-300 ${partner.name === 'Malam Defense' ? 'scale-125 p-0' : partner.name === 'AI21 Labs' ? 'scale-150 p-0' : 'p-2'}`} 
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       const parent = target.parentElement;
