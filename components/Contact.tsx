@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
 
               {/* General Registration Button */}
               <a 
-                href="https://www.eventbrite.com/e/opendefense-2026-tickets-1978896443533"
+                href="https://www.eventbrite.com/e/opendefense-may-2026-tickets-1989171502511"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative flex items-center justify-between bg-white p-7 rounded-[2rem] transition-all duration-500 shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:shadow-primary/40 hover:-translate-y-2 active:scale-95 overflow-hidden"
