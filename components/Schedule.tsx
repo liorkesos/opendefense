@@ -12,7 +12,7 @@ const scheduleData = [
   { time: '11:00', title: 'עבירות מבוססת AI', description: 'רס״ן ר׳ - רמ״ד עבירות ב 9900 , עומר שלף - ראש תחום מיפוי, אלביט', icon: Target, type: 'tech' },
   { time: '11:20', title: 'שימושי AI לזיהוי איומים באמצעות סיבים אופטיים', description: 'איתן אלקין , Prisma Photonics', icon: Radio, type: 'tech' },
   { time: '11:40', title: 'Multi Edge to Multi Cloud and AI , Opensource to drive innovation', description: 'מני צרפתי , מלמ דיפנס', icon: Cpu, type: 'tech' },
-  { time: '12:00', title: 'פאנל AI ביטחוני - בהנחיית ליאור קיסוס | Linnovate', description: 'מטה ה-AI הממשלתי | EnergyTeam | Ai21 | Hossted', icon: Users, type: 'keynote' },
+  { time: '12:00', title: 'פאנל AI ביטחוני - בהנחיית ליאור קיסוס', description: 'מטה ה-AI הממשלתי | EnergyTeam | Ai21 | Hossted', icon: Users, type: 'keynote' },
   { time: '12:30', title: 'הפסקה', description: '', icon: Coffee, type: 'break' },
   { time: '12:45', title: 'ה-AAIF - קוד פתוח בעולם ה-AI', description: 'עמי שלזינגר', icon: Radio, type: 'keynote' },
   { time: '13:05', title: 'מו״פ ביטורנט טאקטי', description: 'גיא מנור ראש צוות getapp - אלביט | לינווייט', icon: Shield, type: 'tech' },
